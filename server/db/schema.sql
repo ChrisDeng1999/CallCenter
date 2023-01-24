@@ -1,0 +1,2 @@
+DROP DATABASE IF EXISTS callCenter_db;
+CREATE DATABASE callCenter_db;
