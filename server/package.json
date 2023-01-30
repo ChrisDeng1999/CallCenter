@@ -1,0 +1,33 @@
+{
+  "name": "callcenter",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node server.js",
+    "develop": "nodemon server.js",
+    "seed": "node seeds/seed.sql"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ChrisDeng1999/CallCenter.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/ChrisDeng1999/CallCenter/issues"
+  },
+  "homepage": "https://github.com/ChrisDeng1999/CallCenter#readme",
+  "dependencies": {
+    "bcrypt": "^5.0.0",
+    "cloudinary": "^1.30.0",
+    "dotenv": "^16.0.3",
+    "express": "^4.18.2",
+    "express-session": "^1.17.1",
+    "mysql": "^2.18.1",
+    "mysql2": "^2.2.5",
+    "nodemon": "^2.0.20"
+  }
+}
