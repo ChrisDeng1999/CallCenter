@@ -20,6 +20,8 @@ CREATE TABLE employees (
     id INT NOT NULL AUTO_INCREMENT PRIMARY KEY,
     first_name VARCHAR(64) NOT NULL,
     last_name VARCHAR(64) NOT NULL,
+    title VARCHAR(64) NOT NULL,
+    busy BIT
 );
 
 CREATE TABLE products (
