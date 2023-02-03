@@ -1,12 +1,11 @@
 import React from 'react';
-import Login from './Login'
-import Register from './Register'
+
 
 const Home = () => {
     return( 
     <div> 
-        <button onClick={Login}>Login</button>
-        <button onClick={Register}>Register</button>
+        <button><a href='/login'>Login</a></button>
+        <button><a href='/register'>Register</a></button>
         <button>Button 1</button>
         <button>Button 2</button>
         <button>Button 3</button>

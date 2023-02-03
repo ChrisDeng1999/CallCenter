@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import Axios from 'axios'
+// import Axios from 'axios';
 
 function Register() {
 
@@ -8,18 +8,18 @@ function Register() {
     const [emailReg, setEmailReg] = useState('');
     const [passwordReg, setPasswordReg] = useState('');
 
-    const register = () => {
-        Axios.post('http://localhost3001/register', 
-        {
-            fname: fnameReg,
-            lname: lnameReg,
-            email: emailReg, 
-            password: passwordReg,
-        }).then((response) => 
-        {
-            console.log(response)
-        });
-    };
+    // const register = () => {
+    //     Axios.post('http://localhos:3001/register', 
+    //     {
+    //         fname: fnameReg,
+    //         lname: lnameReg,
+    //         email: emailReg, 
+    //         password: passwordReg,
+    //     }).then((response) => 
+    //     {
+    //         console.log(response)
+    //     });
+    // };
 
     return (
         <div>
@@ -40,7 +40,7 @@ function Register() {
                 <label>Password</label>
                 <input type ="text" 
                 onChange={(e)=> {setPasswordReg(e.target.value)}}/>
-                <button onClick={register}>Register</button>
+                {/* <button onClick={register}>Register</button> */}
             </div>
         </div>
     )
