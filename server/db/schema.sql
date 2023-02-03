@@ -5,12 +5,12 @@ USE callCenter_db;
 
 CREATE TABLE users (
     id INT NOT NULL AUTO_INCREMENT PRIMARY KEY,
-    first_name VARCHAR(64) NOT NULL,
-    last_name VARCHAR(64) NOT NULL,
+    fname VARCHAR(64) NOT NULL,
+    lname VARCHAR(64) NOT NULL,
     email VARCHAR(255) NOT NULL,
     password VARCHAR(128) NOT NULL,
     balance INT NULL,
-    ProductID INT,
+    ProductID INT NULL,
     FOREIGN KEY (ProductID)
     REFERENCES products(id)
     ON DELETE SET NULL
@@ -18,8 +18,8 @@ CREATE TABLE users (
 
 CREATE TABLE employees (
     id INT NOT NULL AUTO_INCREMENT PRIMARY KEY,
-    first_name VARCHAR(64) NOT NULL,
-    last_name VARCHAR(64) NOT NULL,
+    fname VARCHAR(64) NOT NULL,
+    lname VARCHAR(64) NOT NULL,
     title VARCHAR(64) NOT NULL,
     busy BIT
 );

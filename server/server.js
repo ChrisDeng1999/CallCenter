@@ -2,6 +2,12 @@
 const express = require('express');
 const mysql = require('mysql');
 const app = express();
+const cors = require('cors');
+
+
+app.use(express.json());
+app.use(cors())
+
 
 // Create connection
 const db = mysql.createConnection(
@@ -21,9 +27,22 @@ db.connect((err)=> {
     console.log('MySql is connected');
 })
 
-// Drop database
+// Route to react
+app.post('/register', (req, res) => {
 
-app.get('/deletedb', (req, res) =>{
+    const fname = req.body.fname;
+    const lname = req.body.lname;
+    const email = req.body.email;
+    const password = req.body.password;
+
+    db.query('INSERT INTO users (fname, lname, email, password) VALUES (?,?,?,?)', 
+    [fname, lname, email, password], (err, result) => {
+        if (err) throw err;
+    })
+})
+
+// Drop database
+app.get('/deletedb', (req, res) => {
     let sql = "DROP DATABASE IF EXISTS callCenter_db;";
     db.query(sql, (err, result) => {
         if(err) throw err;
