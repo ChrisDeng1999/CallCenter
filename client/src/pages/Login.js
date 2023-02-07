@@ -9,6 +9,7 @@ function Login() {
                 <input type ="password" placeholder="Password" />
                 <button>Login</button>
             </div>
+            <button><a href="/">Home</a></button>
         </div>
     )
 };
